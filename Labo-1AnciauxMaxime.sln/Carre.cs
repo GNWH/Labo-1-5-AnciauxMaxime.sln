@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labo_1AnciauxMaxime.sln
 {
-    class Carre:Forme, IEstDans
+    class Carre:Forme, IEstDans, ISommets, IComparable
     {
         /*
          * Créer une classe Carre qui hérite de Forme et décrite par : une valeur
@@ -69,6 +69,21 @@ namespace Labo_1AnciauxMaxime.sln
         {
             return p.X >= pointAccroche.X && p.X <= pointAccroche.X + longueur && p.Y >= pointAccroche.Y && p.Y <= pointAccroche.Y + longueur;
             //return p.X >= pointAccroche.X && p.X <= pointAccroche.X + longueur && p.Y <= pointAccroche.Y && p.Y >= pointAccroche.Y - longueur;
+        }
+
+        public int NbrSommets()
+        {
+            return 4;
+        }
+
+        public int CompareTo(object? carre)
+        {
+            return CompareLong(this, (Carre)carre);
+        }
+
+        public static int CompareLong(Carre carre1, Carre carre2)
+        {
+            return MathUtil.Surface(carre1) - MathUtil.Surface(carre2);
         }
     }
 }

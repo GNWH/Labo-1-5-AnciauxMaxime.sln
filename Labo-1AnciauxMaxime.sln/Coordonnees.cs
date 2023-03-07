@@ -36,8 +36,17 @@ namespace Labo_1AnciauxMaxime.sln
 
         #region Propriétés ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        public int X {get; set;}
-        public int Y {get; set;}
+        public int X
+        {
+            get => x; 
+            set => x = value;
+        }
+
+        public int Y
+        {
+            get => y; 
+            set => y = value;
+        }
 
         #endregion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

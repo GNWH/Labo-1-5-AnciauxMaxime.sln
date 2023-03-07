@@ -25,7 +25,11 @@ namespace Labo_1AnciauxMaxime.sln
         #endregion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         #region Proprietes-------------------------------------------------------------
-        public Coordonnees PointAccroche { get; set; }
+        public Coordonnees PointAccroche
+        {
+            get => pointAccroche;
+            set => pointAccroche = value;
+        }
         #endregion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
         #region Methodes---------------------------------------------------------------

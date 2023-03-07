@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labo_1AnciauxMaxime.sln
 {
-    class Rectangle:Forme, IEstDans
+    class Rectangle:Forme, IEstDans, ISommets
     {
         private int longueur;
         private int largeur;
@@ -15,7 +15,7 @@ namespace Labo_1AnciauxMaxime.sln
 
         public Rectangle(Coordonnees coords, int longueur, int largeur)
         {
-            this.PointAccroche = coords;
+            this.pointAccroche = coords;
             this.longueur = longueur;
             this.largeur = largeur;
         }
@@ -36,6 +36,11 @@ namespace Labo_1AnciauxMaxime.sln
         {
             return p.X >= pointAccroche.X && p.X <= pointAccroche.X + Longueur && p.Y >= pointAccroche.Y && p.Y <= pointAccroche.Y + largeur;
             //return p.X >= pointAccroche.X && p.X <= pointAccroche.X + Longueur && p.Y <= pointAccroche.Y && p.Y >= pointAccroche.Y - largeur;
+        }
+
+        public int NbrSommets()
+        {
+            return 4;
         }
     }
 }
