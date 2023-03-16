@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labo_1AnciauxMaxime.sln
 {
-    abstract class Forme
+    public abstract class Forme : IEstDans
     {
         #region Declaration des attributs :--------------------------------------------
 
@@ -34,6 +34,7 @@ namespace Labo_1AnciauxMaxime.sln
 
         #region Methodes---------------------------------------------------------------
         public abstract void Affiche();
+        public abstract bool CoordonneeEstDans(Coordonnees p);
         #endregion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     }

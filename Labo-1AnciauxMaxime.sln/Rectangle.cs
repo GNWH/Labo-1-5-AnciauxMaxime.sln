@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labo_1AnciauxMaxime.sln
 {
-    class Rectangle:Forme, IEstDans, ISommets
+    public class Rectangle:Forme, IEstDans, ISommets
     {
         private int longueur;
         private int largeur;
@@ -20,8 +20,17 @@ namespace Labo_1AnciauxMaxime.sln
             this.largeur = largeur;
         }
 
-        public int Longueur { get; set; }
-        public int Largeur {get; set;}
+        public int Longueur
+        {
+            get => this.longueur;
+            set => this.longueur = value;
+        }
+
+        public int Largeur
+        {
+            get => this.largeur;
+            set => this.largeur = value;
+        }
 
         public override void Affiche()
         {
@@ -32,7 +41,7 @@ namespace Labo_1AnciauxMaxime.sln
             return $"Rectangle({longueur}, {largeur}){pointAccroche}";
         }
 
-        public bool CoordonneeEstDans(Coordonnees p)
+        public override bool CoordonneeEstDans(Coordonnees p)
         {
             return p.X >= pointAccroche.X && p.X <= pointAccroche.X + Longueur && p.Y >= pointAccroche.Y && p.Y <= pointAccroche.Y + largeur;
             //return p.X >= pointAccroche.X && p.X <= pointAccroche.X + Longueur && p.Y <= pointAccroche.Y && p.Y >= pointAccroche.Y - largeur;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labo_1AnciauxMaxime.sln
 {
-    class Carre:Forme, IEstDans, ISommets, IComparable
+    public class Carre:Forme, IEstDans, ISommets, IComparable
     {
         /*
          * Créer une classe Carre qui hérite de Forme et décrite par : une valeur
@@ -65,7 +65,7 @@ namespace Labo_1AnciauxMaxime.sln
         }
         #endregion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-        public bool CoordonneeEstDans(Coordonnees p)
+        public override bool CoordonneeEstDans(Coordonnees p)
         {
             return p.X >= pointAccroche.X && p.X <= pointAccroche.X + longueur && p.Y >= pointAccroche.Y && p.Y <= pointAccroche.Y + longueur;
             //return p.X >= pointAccroche.X && p.X <= pointAccroche.X + longueur && p.Y <= pointAccroche.Y && p.Y >= pointAccroche.Y - longueur;

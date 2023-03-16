@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Labo_1AnciauxMaxime.sln
 {
-    class Coordonnees
+    public class Coordonnees
     {
         #region Declaration des attributs :--------------------------------------------
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labo_1AnciauxMaxime.sln
 {
-    class Cercle : Forme, IEstDans
+    public class Cercle : Forme, IEstDans
     {
         #region Attributs--------------------------------------------------------------
 
@@ -30,7 +30,11 @@ namespace Labo_1AnciauxMaxime.sln
 
         #region Propriétées------------------------------------------------------------
 
-        public int Rayon { get; set; }
+        public int Rayon
+        {
+            get => this.rayon;
+            set => this.rayon = value;
+        }
 
         #endregion ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -44,7 +48,7 @@ namespace Labo_1AnciauxMaxime.sln
             return $"Cercle({rayon}){pointAccroche}";
         }
 
-        public bool CoordonneeEstDans(Coordonnees p)
+        public override bool CoordonneeEstDans(Coordonnees p)
         {
             return (p.X-pointAccroche.X)*(p.X-pointAccroche.X) + (p.Y-pointAccroche.Y)*(p.Y-pointAccroche.Y) <= rayon*rayon ;
         }
